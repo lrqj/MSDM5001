@@ -1,0 +1,6 @@
+while  read -r line;
+do
+   if [["$line" =~ block\ id=\"i[0-9]{3}\".+]];do
+     echo "$line"
+   fi
+done < blocklist.xml
